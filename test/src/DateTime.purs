@@ -24,6 +24,7 @@ datetimeTest = describe "Data.Formatter.DateTime" do
     , { format: "MMM D", dateStr: "Apr 1", date: makeDateTime 2017 4 1 0 0 0 0 }
     , { format: "dddd, MMM D", dateStr: "Saturday, Apr 1", date: makeDateTime 2017 4 1 0 0 0 0 }
     , { format: "ddd, MMM D", dateStr: "Sat, Apr 1", date: makeDateTime 2017 4 1 0 0 0 0 }
+    , { format: "YYYY-DD-MM(ddd)", dateStr: "2017-01-04(Sat)", date: makeDateTime 2017 4 1 0 0 0 0 }
     , { format: "E", dateStr: "6", date: makeDateTime 2017 4 1 0 0 0 0 }
     , { format: "hh:mm:ss:SSS a", dateStr: "11:03:04:234 AM", date: makeDateTime 2017 4 12 11 3 4 234 }
     , { format: "YY", dateStr: "17", date: makeDateTime 2017 4 12 11 3 4 234 }
@@ -48,6 +49,7 @@ datetimeTest = describe "Data.Formatter.DateTime" do
     , { format: "HHmmssSSS", dateStr: "134530123", date: makeDateTime 2017 4 10 13 45 30 123 }
     , { format: "HHmm", dateStr: "1345", date: makeDateTime 2017 4 10 13 45 30 123 }
     , { format: "X", dateStr: "1499779279", date: makeDateTime 2017 7 11 13 21 19 0 }
+    , { format: "(X)", dateStr: "(1499779279)", date: makeDateTime 2017 7 11 13 21 19 0 }
     , { format: "YYYY", dateStr: "-2000", date: makeDateTime (-2000) 0 0 0 0 0 0 }
     ]
     ( \({ format, dateStr, date }) -> do

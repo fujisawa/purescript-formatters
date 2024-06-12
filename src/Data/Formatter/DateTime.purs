@@ -141,7 +141,7 @@ printFormatterCommand = case _ of
   needsEscaping = CU.toCharArray >>> Array.any (flip Array.elem formatCharacters)
 
 formatCharacters :: Array Char
-formatCharacters = CU.toCharArray "YMDEHhamsS"
+formatCharacters = CU.toCharArray "YMDEHhamsSXd"
 
 -- | The format string representation of a `Formatter`.
 -- | 
